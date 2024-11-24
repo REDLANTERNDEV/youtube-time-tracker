@@ -1,19 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Watch Time Tracker",
+  "name": "YouTube Kronometre",
   "version": "1.0",
-  "description": "Track your YouTube watch time day by day.",
-  "permissions": ["storage", "tabs", "activeTab", "scripting"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "YouTube Watch Time Tracker"
-  },
+  "permissions": ["storage", "background"],
   "background": {
     "service_worker": "background.js"
   },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": ["*://www.youtube.com/watch*"],
       "js": ["content.js"]
     }
   ]

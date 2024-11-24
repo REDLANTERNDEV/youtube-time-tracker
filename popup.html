@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
   <head>
+    <title>Kronometre</title>
     <style>
-      body {
+      html {
         font-family: Arial, sans-serif;
-        min-width: 200px;
-        min-height: 200px;
-        padding: 10px;
-      }
-      #timer {
-        font-size: 24px;
-        margin-bottom: 15px;
         text-align: center;
       }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      #timer {
+        font-size: 2em;
+      }
       button {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        margin-bottom: 5px;
+        margin: 5px;
       }
     </style>
   </head>
   <body>
     <div id="timer">00:00:00</div>
-    <button id="toggleButton">Start Tracking</button>
-    <button id="resetButton">Reset Timer</button>
-    <button id="pinButton">Pin Timer to Page</button>
+    <button id="start">BASLAT</button>
+    <button id="stop">DURDUR</button>
+    <button id="reset">SIFIRLA</button>
     <script src="popup.js"></script>
   </body>
 </html>
